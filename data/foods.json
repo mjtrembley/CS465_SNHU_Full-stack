@@ -1,0 +1,20 @@
+[
+    {
+        "category" : "Seafood Special",
+        "image" : "seafoods.jpg",
+        "name" : "Whole Maine Lobster",
+        "description" : "Try a fantastic lobster from Maine!"
+    },
+    {
+        "category" : "Delicious Desserts",
+        "image" : "desserts.jpg",
+        "name" : "Vanilla ice cream sandwich",
+        "description" : "Divulge in a decadent ice cream sandwich!"
+    },
+    {
+        "category" : "Buffet",
+        "image" : "buffet.jpg",
+        "name" : "Full Buffet",
+        "description" : "Come on down and try the buffet where everything is fresh!"
+    }
+]
