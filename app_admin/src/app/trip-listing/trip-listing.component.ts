@@ -1,9 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from "@angular/router";
 //import { trips } from '../data/trips';
-import { TripDataService } from 'services/trip-data.service';
+import { TripDataService } from 'src/app/services/trip-data.service';
 import { Trip } from 'models/trip';
-import { AuthenticationService } from 'services/authentication.service';
+import { AuthenticationService } from 'src/app/services/authentication.service';
 
 
 @Component({
