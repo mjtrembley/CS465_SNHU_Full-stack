@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<!-- Website template by freewebsitetemplates.com -->
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Foods - Travlr Getaways Website Template</title>
+	<link rel="stylesheet" href="css/style.css" type="text/css">
+</head>
+<body>
+	<div id="background">
+		<div id="page">
+			{{>header}}
+			<div id="contents">
+				<div class="box">
+					<div>
+						<div class="body">
+							<h1>Meals</h1>
+							<ul id="foods">
+       {{#each foodsToEat}} <!-- Important to know, make sure the parameter passed is from the controller  -->
+                               <li>
+									<h2><a href="/foods">{{this.category}}</a></h2>
+									<div class="infos">
+										<a href="/foods"><img src="images/{{this.image}}" alt="Img" height="169" width="780"><span class="cover"></span></a>
+										<p>
+											<span>{{this.name}}</span> {{this.description}}
+										</p>
+									</div>
+								</li>
+       {{/each}}
+                                </ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		{{>footer}}
+		    </div>
+			<p>
+				© 2023 by Travlr Getaways. All Rights Reserved
+			</p>
+        </div>
+	</div>
+</body>
+</html>
