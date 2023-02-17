@@ -1,6 +1,6 @@
 import { Inject, Injectable } from '@angular/core';
 import { Http } from '@angular/http';
-import { Trip } from '../../../models/trip';
+import { Trip } from '../../../../app_admin/models/trip';
 import { Users } from 'src/app/models/users';
 import { AuthResponse } from 'src/app/models/authresponse';
 import { BROWSER_STORAGE } from 'src/app/storage';
