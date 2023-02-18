@@ -79,7 +79,7 @@ const tripsUpdateTrip = async (req, res) => {
     getUser(req, res,
         (req, res) => {
     Trip
-        .findOneAndUpdate({ 'code': req.params.tripCode }, {
+        .findOneAndUpdate({ 'code': req.params.code }, {
             code: req.body.code,
             name: req.body.name,
             length: req.body.length,
@@ -94,7 +94,7 @@ const tripsUpdateTrip = async (req, res) => {
                 return res
                     .status(404)
                     .send({
-                        message: "Trip not found with code " + req.params.tripCode
+                        message: "Trip not found with code " + req.params.code
                     });
             }
             res.send(trip);
@@ -103,7 +103,7 @@ const tripsUpdateTrip = async (req, res) => {
                 return res
                     .status(404)
                     .send({
-                        message: "Trip not found with code " + req.params.tripCode
+                        message: "Trip not found with code " + req.params.code
                     });
             }
         return res

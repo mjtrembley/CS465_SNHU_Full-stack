@@ -48,7 +48,7 @@ export class EditTripComponent implements OnInit {
       .then(data => {
         console.log(data);
          // Don't use editForm.setValue() as it will throw console error
-        this.editForm.patchValue(data[0]);
+      this.editForm.patchValue(data[0]);
     })
   }
 
@@ -59,7 +59,7 @@ export class EditTripComponent implements OnInit {
       this.tripService.updateTrip(this.editForm.value)
         .then(data => {
           console.log(data);
-          this.router.navigate(['']);
+           this.router.navigate(['']);
       });
    }
   }

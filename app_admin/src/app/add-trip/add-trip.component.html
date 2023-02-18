@@ -32,9 +32,9 @@
   <div class="form-group">
     <label>Start Date:</label>
     <input type="text" formControlName="start" placeholder="Start" class="form-control"
-      [ngClass]="{ 'is-invalid': submitted && f.startDate.errors }">
-    <div *ngIf="submitted && f.startDate.errors">
-      <div *ngIf="f.startDate.errors.required">Start Date is required</div>
+      [ngClass]="{ 'is-invalid': submitted && f.start.errors }">
+    <div *ngIf="submitted && f.start.errors">
+      <div *ngIf="f.start.errors.required">Start Date is required</div>
   </div>
 </div>
 
