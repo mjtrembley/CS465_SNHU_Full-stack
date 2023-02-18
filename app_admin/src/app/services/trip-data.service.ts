@@ -55,7 +55,7 @@ export class TripDataService {
     return this.http
       .put(this.tripUrl + formData.code, formData, {headers: headers})
       .toPromise()
-      .then((response) => response.json() as Trip[])
+      .then(response => response.json() as Trip[])
       .catch(this.handleError);
   }
 
