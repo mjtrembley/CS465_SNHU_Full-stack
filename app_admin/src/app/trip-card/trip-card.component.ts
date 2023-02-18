@@ -10,7 +10,7 @@ import { AuthenticationService } from 'src/app/services/authentication.service';
 })
 export class TripCardComponent implements OnInit {
 
-  @Input('trip') trip: any;
+  @Input('trip') trip: Trip;
 
   constructor(
     private router: Router,
