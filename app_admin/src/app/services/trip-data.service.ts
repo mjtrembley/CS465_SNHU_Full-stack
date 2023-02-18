@@ -19,11 +19,11 @@ export class TripDataService {
     return this.http 
       .get(this.tripUrl)
       .toPromise()
-      .then(response => response.json() as Trip[])
+      .then((response) => response.json() as Trip[])
       .catch(this.handleError);
   }
 
-  public getTrip(code: string): Promise<Trip[]>{
+  public getTrip(code: string): Promise<Trip>{
     console.log('Inside TripDataService#getTrip(tripCode)');
     return this.http 
       .get(this.tripUrl + code)
@@ -41,7 +41,7 @@ export class TripDataService {
     return this.http
       .post(this.tripUrl, formData, {headers: headers})
       .toPromise()
-      .then(response =>response.json() as Trip[])
+      .then((response) =>response.json() as Trip[])
       .catch(this.handleError);
   }
 
@@ -55,7 +55,7 @@ export class TripDataService {
     return this.http
       .put(this.tripUrl + formData.code, formData, {headers: headers})
       .toPromise()
-      .then(response => response.json() as Trip[])
+      .then((response) => response.json() as Trip[])
       .catch(this.handleError);
   }
 
@@ -77,7 +77,7 @@ export class TripDataService {
     return this.http
       .post(url, user)
       .toPromise()
-      .then(response => response.json() as AuthResponse)
+      .then((response) => response.json() as AuthResponse)
       .catch(this.handleError);
   }
 }

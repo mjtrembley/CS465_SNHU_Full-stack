@@ -25,7 +25,7 @@ const register = (req, res) => {
           .status(200)
           .json({token});
         }
-    })
+    });
 };
 
 const login = (req, res) => {
