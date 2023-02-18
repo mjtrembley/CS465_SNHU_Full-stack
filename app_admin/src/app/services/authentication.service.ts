@@ -47,13 +47,15 @@ export class AuthenticationService {
       return false;
     }
   }
-public getCurrentUser(): Users {
-  if (this.isLoggedIn()) {
-    const token: string = this.getToken();
-    const {email, name} =
-  JSON.parse(atob(token.split('.')[1]));
-    return {email, name} as Users;
-  }
+  public getCurrentUser(): Users {
+    if (this.isLoggedIn()) {
+      const token: string = this.getToken();
+      const {email, name} =
+    JSON.parse(atob(token.split('.')[1]));
+      return {email, name} as Users;
+    } else{
+      console.log('not logged in');
+    }
 }
 
 }

@@ -115,7 +115,6 @@ const tripsUpdateTrip = async (req, res) => {
 }
 
 const getUser = (req, res, callback) => {
-    console.log("Payload email" + req.payload.email);
     if (req.payload && req.payload.email) {
         User
             .findOne({ email: req.payload.email }).exec((err, user) => {
