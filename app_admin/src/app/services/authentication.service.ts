@@ -52,7 +52,7 @@ export class AuthenticationService {
       const token: string = this.getToken();
       const {email, name} =
     JSON.parse(atob(token.split('.')[1]));
-      return {email, name};
+      return {email, name} as Users;
     }
 }
 
