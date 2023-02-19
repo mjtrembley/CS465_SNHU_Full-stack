@@ -47,6 +47,7 @@ export class AuthenticationService {
       return false;
     }
   }
+  
   public getCurrentUser(): Users {
     if (this.isLoggedIn()) {
       const token: string = this.getToken();

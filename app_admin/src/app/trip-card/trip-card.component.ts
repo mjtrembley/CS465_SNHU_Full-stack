@@ -32,8 +32,10 @@ export class TripCardComponent implements OnInit {
     }
 
     private delete(trip: Trip): void{
-      this.tripService.deleteTrip(trip.code)
-      this.router.navigate(['list-trips'])
+      console.log('Inside TripCardComponent#deleteTrip');
+      localStorage.removeItem('tripCode');
+      localStorage.setItem('tripCode', trip.code)
+      this.router.navigate(['delete-trip'])
     }
     
 }
