@@ -15,7 +15,7 @@ export class AuthenticationService {
   ) { }
 
   public getToken(): string { 
-    return this.storage.getItem('travlr-token');
+    return this.storage.getItem('travlr-token') as string;
   }
 
   public saveToken(token: string): void {
@@ -51,10 +51,16 @@ export class AuthenticationService {
   public getCurrentUser(): Users {
     if (this.isLoggedIn()) {
       const token: string = this.getToken();
-      const {email, name} =
-    JSON.parse(atob(token.split('.')[1]));
-      return {email, name} as Users;
+      const {email, name} = JSON.parse(atob(token.split('.')[1]));
+      return {email, name};
+    }
+    else {
+      return this.userDefault();
     }
 }
+  public userDefault(): Users{
+    const email = "none", name = "none";
+    return {email, name}
+  }
 
 }

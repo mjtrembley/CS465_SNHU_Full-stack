@@ -12,7 +12,11 @@ export class HomeComponent implements OnInit {
   ) { }
 
   ngOnInit() {
+    if (this.isLoggedIn() == true){
+        return this.authenticationService.getCurrentUser();
+    }
   }
+  
   public isLoggedIn(): boolean{
     return this.authenticationService.isLoggedIn();
   }
